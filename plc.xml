@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2024-09-17T16:35:19"/>
-  <contentHeader name="Unnamed" modificationDateTime="2024-09-25T18:58:01">
+  <contentHeader name="Unnamed" modificationDateTime="2024-10-06T17:49:12">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -98,11 +98,13 @@
               <variable>SD2</variable>
             </contact>
             <contact localId="6" negated="false" width="21" height="20">
-              <position x="440" y="240"/>
+              <position x="430" y="250"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="5">
-                  <position x="440" y="250"/>
+                  <position x="430" y="260"/>
+                  <position x="330" y="260"/>
+                  <position x="330" y="250"/>
                   <position x="221" y="250"/>
                 </connection>
               </connectionPointIn>
@@ -157,9 +159,7 @@
                 </connection>
                 <connection refLocalId="6">
                   <position x="650" y="260"/>
-                  <position x="555" y="260"/>
-                  <position x="555" y="250"/>
-                  <position x="461" y="250"/>
+                  <position x="451" y="260"/>
                 </connection>
                 <connection refLocalId="4">
                   <position x="650" y="260"/>
@@ -474,6 +474,122 @@
               </outputVariables>
             </block>
           </FBD>
+        </body>
+      </pou>
+      <pou name="functionBlock0" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="TON_Timer1">
+              <type>
+                <derived name="TON"/>
+              </type>
+            </variable>
+            <variable name="TOF_Timer2">
+              <type>
+                <derived name="TOF"/>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <LD>
+            <contact localId="1" negated="false" width="20" height="20">
+              <position x="60" y="80"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="20" y="10"/>
+              </connectionPointOut>
+              <variable>PushButton1</variable>
+            </contact>
+            <coil localId="2" negated="false" width="20" height="20">
+              <position x="340" y="80"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="20" y="10"/>
+              </connectionPointOut>
+              <variable>LampBlue</variable>
+            </coil>
+            <coil localId="3" negated="false" width="20" height="20">
+              <position x="350" y="200"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="20" y="10"/>
+              </connectionPointOut>
+              <variable>LampGreen</variable>
+            </coil>
+            <contact localId="4" negated="true" width="20" height="20">
+              <position x="60" y="240"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="20" y="10"/>
+              </connectionPointOut>
+              <variable>PushButton1</variable>
+            </contact>
+            <block localId="6" typeName="TON" instanceName="TON_Timer1" width="50" height="60">
+              <position x="220" y="70"/>
+              <inputVariables>
+                <variable formalParameter="IN">
+                  <connectionPointIn>
+                    <relPosition x="0" y="30"/>
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="PT">
+                  <connectionPointIn>
+                    <relPosition x="0" y="50"/>
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables/>
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut>
+                    <relPosition x="50" y="30"/>
+                  </connectionPointOut>
+                </variable>
+                <variable formalParameter="ET">
+                  <connectionPointOut>
+                    <relPosition x="50" y="50"/>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+            </block>
+            <block localId="8" typeName="TOF" instanceName="TOF_Timer2" width="50" height="60">
+              <position x="210" y="220"/>
+              <inputVariables>
+                <variable formalParameter="IN">
+                  <connectionPointIn>
+                    <relPosition x="0" y="30"/>
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="PT">
+                  <connectionPointIn>
+                    <relPosition x="0" y="50"/>
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables/>
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut>
+                    <relPosition x="50" y="30"/>
+                  </connectionPointOut>
+                </variable>
+                <variable formalParameter="ET">
+                  <connectionPointOut>
+                    <relPosition x="50" y="50"/>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+            </block>
+          </LD>
         </body>
       </pou>
     </pous>
