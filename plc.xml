@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2024-09-17T16:35:19"/>
-  <contentHeader name="Unnamed" modificationDateTime="2024-10-06T17:49:12">
+  <contentHeader name="Unnamed" modificationDateTime="2024-10-07T20:39:50">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -141,104 +141,36 @@
               </connectionPointOut>
               <variable>AB</variable>
             </contact>
-            <coil localId="10" negated="false" width="21" height="20">
-              <position x="650" y="250"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="11">
-                  <position x="650" y="260"/>
-                  <position x="495" y="260"/>
-                  <position x="495" y="350"/>
-                  <position x="341" y="350"/>
-                </connection>
-                <connection refLocalId="9">
-                  <position x="650" y="260"/>
-                  <position x="495" y="260"/>
-                  <position x="495" y="300"/>
-                  <position x="341" y="300"/>
-                </connection>
-                <connection refLocalId="6">
-                  <position x="650" y="260"/>
-                  <position x="451" y="260"/>
-                </connection>
-                <connection refLocalId="4">
-                  <position x="650" y="260"/>
-                  <position x="555" y="260"/>
-                  <position x="555" y="170"/>
-                  <position x="461" y="170"/>
-                </connection>
-                <connection refLocalId="2">
-                  <position x="650" y="260"/>
-                  <position x="575" y="260"/>
-                  <position x="575" y="90"/>
-                  <position x="500" y="90"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>ALARM</variable>
-            </coil>
-            <contact localId="11" negated="false" width="21" height="20">
-              <position x="320" y="340"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="8">
-                  <position x="320" y="350"/>
-                  <position x="120" y="350"/>
-                  <position x="120" y="270"/>
-                  <position x="60" y="270"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>Latch</variable>
-            </contact>
             <rightPowerRail localId="12" width="10" height="80">
               <position x="850" y="300"/>
               <connectionPointIn>
                 <relPosition x="0" y="20"/>
-                <connection refLocalId="10">
+                <connection refLocalId="21">
                   <position x="850" y="320"/>
-                  <position x="760" y="320"/>
-                  <position x="760" y="260"/>
-                  <position x="670" y="260"/>
+                  <position x="755" y="320"/>
+                  <position x="755" y="240"/>
+                  <position x="660" y="240"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="60"/>
-                <connection refLocalId="19">
+                <connection refLocalId="22">
                   <position x="850" y="360"/>
                   <position x="750" y="360"/>
-                  <position x="750" y="430"/>
-                  <position x="650" y="430"/>
+                  <position x="750" y="410"/>
+                  <position x="650" y="410"/>
                 </connection>
               </connectionPointIn>
             </rightPowerRail>
-            <contact localId="13" negated="false" width="21" height="20">
-              <position x="110" y="420"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="8">
-                  <position x="110" y="430"/>
-                  <position x="85" y="430"/>
-                  <position x="85" y="270"/>
-                  <position x="60" y="270"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>Latch</variable>
-            </contact>
             <contact localId="14" negated="true" width="21" height="20">
               <position x="190" y="420"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="13">
+                <connection refLocalId="8">
                   <position x="190" y="430"/>
-                  <position x="131" y="430"/>
+                  <position x="125" y="430"/>
+                  <position x="125" y="270"/>
+                  <position x="60" y="270"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
@@ -302,20 +234,56 @@
               </connectionPointOut>
               <variable>Clear</variable>
             </contact>
-            <contact localId="19" negated="false" width="21" height="20">
-              <position x="630" y="420"/>
+            <coil localId="21" negated="false" storage="set" width="20" height="20">
+              <position x="640" y="230"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="2">
+                  <position x="640" y="240"/>
+                  <position x="570" y="240"/>
+                  <position x="570" y="90"/>
+                  <position x="500" y="90"/>
+                </connection>
+                <connection refLocalId="4">
+                  <position x="640" y="240"/>
+                  <position x="550" y="240"/>
+                  <position x="550" y="170"/>
+                  <position x="461" y="170"/>
+                </connection>
+                <connection refLocalId="6">
+                  <position x="640" y="240"/>
+                  <position x="545" y="240"/>
+                  <position x="545" y="260"/>
+                  <position x="451" y="260"/>
+                </connection>
+                <connection refLocalId="9">
+                  <position x="640" y="240"/>
+                  <position x="580" y="240"/>
+                  <position x="580" y="300"/>
+                  <position x="341" y="300"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="20" y="10"/>
+              </connectionPointOut>
+              <variable>ALARM</variable>
+            </coil>
+            <coil localId="22" negated="false" storage="reset" width="20" height="20">
+              <position x="630" y="400"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="18">
-                  <position x="630" y="430"/>
+                  <position x="630" y="410"/>
+                  <position x="595" y="410"/>
+                  <position x="595" y="430"/>
                   <position x="561" y="430"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="21" y="10"/>
+                <relPosition x="20" y="10"/>
               </connectionPointOut>
-              <variable>R Latch</variable>
-            </contact>
+              <variable>ALARM</variable>
+            </coil>
           </LD>
         </body>
       </pou>
@@ -493,43 +461,43 @@
         </interface>
         <body>
           <LD>
-            <contact localId="1" negated="false" width="20" height="20">
+            <contact localId="1" negated="false" width="21" height="20">
               <position x="60" y="80"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>PushButton1</variable>
             </contact>
-            <coil localId="2" negated="false" width="20" height="20">
+            <coil localId="2" negated="false" width="21" height="20">
               <position x="340" y="80"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>LampBlue</variable>
             </coil>
-            <coil localId="3" negated="false" width="20" height="20">
+            <coil localId="3" negated="false" width="21" height="20">
               <position x="350" y="200"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>LampGreen</variable>
             </coil>
-            <contact localId="4" negated="true" width="20" height="20">
+            <contact localId="4" negated="true" width="21" height="20">
               <position x="60" y="240"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>PushButton1</variable>
             </contact>
